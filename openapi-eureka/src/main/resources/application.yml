@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: openapi-eureka
+  #安全相关的配置,开启后无法自动注册
+  security:
+    user:
+      name: admin
+      password: admin
+
+server:
+  port: 20000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka  # 注册中心的zone地址
+    fetch-registry: false # 单机版的配置
+    register-with-eureka: false
